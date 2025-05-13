@@ -1,0 +1,356 @@
+:root {
+    --primary: #4361EE;
+    --secondary: #3A0CA3;
+    --accent: #7209B7;
+    --light: #F8F9FA;
+    --dark: #4361EE;
+    --success: #4CC9F;
+    --warning: #F72585;
+    --text: #2B2D42;
+    --gray: #ADB5BD;
+    background: linear-gradient(135deg, var(--naranja-intenso), var(--rojo-intenso));
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--text);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background:linear-gradient(90deg,#ff3131, #ff914d);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+.logo h1{
+    font-family: 'Love line';
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    text-decoration: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.active {
+    background-color: var(--primary);
+}
+
+.menu-item i {
+    width: 24px;
+    text-align: center;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.content-header h2 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card h3 {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.stat-card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-card .trend {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.trend.up {
+    color: var(--success);
+}
+
+.trend.down {
+    color: var(--warning);
+}
+
+/* Table Styles */
+.table-container {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--light);
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.student-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge.success {
+    background-color: rgba(76, 201, 240, 0.1);
+    color: var(--success);
+}
+
+.badge.warning {
+    background-color: rgba(247, 37, 133, 0.1);
+    color: var(--warning);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--gray);
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    background-color: #f0f0f0;
+}
+
+/* Quick Actions */
+.quick-actions {
+    margin-top: 1rem;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.action-card {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.action-card i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.action-card span {
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboard {
+        grid-template-columns: 80px 1fr;
+    }
+    
+    .logo h1, .menu-item span {
+        display: none;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .menu-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .actions-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@font-face {
+    font-family: 'Love line';
+    src: url('Font/Lovelo\ Line\ Bold.otf') format('opentype');
+}

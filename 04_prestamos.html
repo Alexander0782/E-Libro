@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-Libro</title>
+    <link rel="stylesheet" href="04_prestamos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="img/Logo E-libro.png" alt=" logo" style="height: 6em;">
+                
+                <h1>E-Libro</h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="01_inicio.html" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="02_libros.html" class="menu-item">
+                    <i class="fas fa-book"></i>
+                    <span>Libros</span>
+                </a>
+
+                <a href="03_estudiantes.html" class="menu-item">
+                    <i class="fas fa-users"></i>
+                    <span>Estudiantes</span>
+                </a>
+
+                <div class="menu-item active">
+                    <i class="fas fa-book-medical"></i>
+                    <span>Prestamos</span>
+                </div>
+
+                <a href="05_plan_lector.html" class="menu-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Plan lector</span>
+                </a>
+
+                <a href="06_configuracion.html" class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuracion</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h2><i class="fas fa-book-medical"></i>Prestamos</h2>
+                <div class="user-profile">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Usuario">
+                    <span>Admin</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-book stat-icon" style="color: #4361EE;"></i>
+                    <h3>Libros Disponibles</h3>
+                    <div class="value">1,245</div>
+                    <div class="trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>5% este mes</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users stat-icon" style="color: #7209B7;"></i>
+                    <h3>Estudiantes</h3>
+                    <div class="value">856</div>
+                    <div class="trend up">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>2% este mes</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-exchange-alt stat-icon" style="color: #4CC9F0;"></i>
+                    <h3>Prestamos Activos</h3>
+                    <div class="value">189</div>
+                    <div class="trend down">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>3% esta semana</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-exclamation-circle stat-icon" style="color: #F72585;"></i>
+                    <h3>Retrasos</h3>
+                    <div class="value">12</div>
+                    <div class="trend down">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>8% esta semana</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Loans Table -->
+            <div class="table-container">
+                <h3 class="section-title">
+                    <i class="fas fa-history"></i>
+                    Prestamos Recientes
+                </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Estudiante</th>
+                            <th>Libro</th>
+                            <th>Fecha Prestamos</th>
+                            <th>Fecha Devolucion</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Estudiante">
+                                    <span>Namer</span>
+                                </div>
+                            </td>
+                            <td> Namer de Libro</td>
+                            <td>15/05/2023</td>
+                            <td>29/05/2023</td>
+                            <td><span class="badge success">Activo</span></td>
+                            <td>
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Estudiante">
+                                    <span>Namer</span>
+                                </div>
+                            </td>
+                            <td>El Principito</td>
+                            <td>10/05/2023</td>
+                            <td>24/05/2023</td>
+                            <td><span class="badge warning">Retrasado</span></td>
+                            <td>
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="student-info">
+                                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Estudiante">
+                                    <span>Namer</span>
+                                </div>
+                            </td>
+                            <td>Don Quijote</td>
+                            <td>08/05/2023</td>
+                            <td>22/05/2023</td>
+                            <td><span class="badge success">Devuelto</span></td>
+                            <td>
+                                <button class="btn btn-outline">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3 class="section-title">
+                    <i class="fas fa-bolt"></i>
+                    Acciones Rapidas
+                </h3>
+                <div class="actions-grid">
+                    <button class="action-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Nuevo Prestamo</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fas fa-book-medical"></i>
+                        <span>Registrar Libro</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Agregar Estudiante</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fas fa-print"></i>
+                        <span>Generar Reporte</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
