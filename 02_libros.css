@@ -103,6 +103,22 @@ body {
     gap: 0.8rem;
 }
 
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.search-bar input{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--gray);
+    font-size: 1rem;
+}
+
 .user-profile {
     display: flex;
     align-items: center;
@@ -135,6 +151,7 @@ body {
 
 .stat-card {
     background: white;
+    border: 1px solid var(--gray);
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -144,13 +161,12 @@ body {
     transition: transform 0.3s;
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
+.stat-card img{
+    border-bottom: 1px solid var(--text);
 }
 
-.stat-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+.stat-card:hover {
+    transform: translateY(-5px);
 }
 
 .stat-card h3 {
@@ -163,21 +179,6 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary);
-}
-
-.stat-card .trend {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.9rem;
-}
-
-.trend.up {
-    color: var(--success);
-}
-
-.trend.down {
-    color: var(--warning);
 }
 
 /* Table Styles */
@@ -315,9 +316,8 @@ tr:hover {
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-.action-card i {
+.action-card p {
     font-size: 2rem;
-    color: var(--primary);
 }
 
 .action-card span {
@@ -364,7 +364,28 @@ tr:hover {
     }
 }
 
+/* Font Face Declarations */
+
 @font-face {
     font-family: 'Love line';
     src: url('Font/Lovelo\ Line\ Bold.otf') format('opentype');
+}
+@font-face {
+    font-family:'shlop' ;
+    src: url(Font/shlop\ rg.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'lovely';
+    src: url('Font/Lovely.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: Bright Retro;
+    src: url(Font/Bright\ DEMO.otf) format('opentype');
+}
+
+@font-face {
+    font-family: lazydog;
+    src: url(Font/lazy_dog.ttf) format('opentype');
 }
