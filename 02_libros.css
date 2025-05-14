@@ -117,7 +117,16 @@ body {
     object-fit: cover;
 }
 
-/* Stats Grid */
+/* Libros Destacados */
+.stats-grid-title{
+    width: max-content;
+    gap: 0.8rem;
+    background: linear-gradient(90deg, #ff914d, #fffb00); /* Degradado de colores */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -271,7 +280,7 @@ tr:hover {
     background-color: #f0f0f0;
 }
 
-/* Quick Actions */
+/* Categorias */
 .quick-actions {
     margin-top: 1rem;
 }
@@ -294,6 +303,11 @@ tr:hover {
     gap: 1rem;
     cursor: pointer;
     transition: all 0.3s;
+}
+
+.action-card p{
+    font-size: 1.5rem;
+    color: white;
 }
 
 .action-card:hover {
